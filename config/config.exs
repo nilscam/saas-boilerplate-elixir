@@ -25,6 +25,8 @@ config :phoenix, :json_library, Jason
 config :money,
   default_currency: :USD
 
+
+# generate a new secret key for production with `mix guardian.gen.secret` !
 config :core,
   Core.Guardian,
   issuer: "core",
