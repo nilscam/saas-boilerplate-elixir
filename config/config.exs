@@ -23,9 +23,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-config :core, Core.Guardian,
+config :core,
+  Core.Guardian,
   issuer: "core",
-  secret_key: "Secret key. You can use `mix guardian.gen.secret` to get one"
+  secret_key: "kkL58K5aTduqRvx/6EnsvSwSqI+AjwsnCWaHkg13OxBtmKcGmpU1DEvjSBZJX1sH"
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

@@ -7,7 +7,7 @@ defmodule CoreWeb.Router do
 
   pipeline :authenticated do
     plug :accepts, ["json"]
-    # plug Core.Guardian.AuthPipeline
+    plug Core.Guardian.AuthPipeline
   end
 
   scope "/auth", CoreWeb do
