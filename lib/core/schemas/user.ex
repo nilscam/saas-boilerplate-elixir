@@ -4,7 +4,7 @@ defmodule Core.Schema.User do
   use Core.Model
   import Ecto.Changeset
 
-  alias Core.Schema.User
+  alias Core.Schema.{User, BillingPlan}
 
   schema "users" do
     field :username, :string
@@ -12,6 +12,8 @@ defmodule Core.Schema.User do
 
     field :encrypted_password, :string
     field :password, :string, virtual: true
+
+    belongs_to :subscription_plan, BillingPlan
 
     timestamps()
   end
